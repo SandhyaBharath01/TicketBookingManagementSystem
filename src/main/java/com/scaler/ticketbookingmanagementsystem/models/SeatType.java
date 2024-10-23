@@ -1,2 +1,10 @@
-package com.scaler.ticketbookingmanagementsystem.models;public enum SeatType {
+package com.scaler.ticketbookingmanagementsystem.models;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class SeatType extends BaseModel {
+    private String value;
 }

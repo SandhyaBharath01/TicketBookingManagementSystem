@@ -1,2 +1,18 @@
-package com.scaler.ticketbookingmanagementsystem.models;public class Show {
+package com.scaler.ticketbookingmanagementsystem.models;
+
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.script.ScriptEngine;
+import java.util.Date;
+import java.util.List;
+
+@Getter
+@Setter
+public class Show extends BaseModel {
+    private Movie movie;
+    private Date startTime;
+    private Date endTime;
+    private Screen screen;
+    private List<Feature> features;
 }

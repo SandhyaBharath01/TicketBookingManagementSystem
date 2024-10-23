@@ -1,2 +1,7 @@
-package com.scaler.ticketbookingmanagementsystem.models;public enum BookingStatus {
+package com.scaler.ticketbookingmanagementsystem.models;
+
+public enum BookingStatus {
+    BOOKED,
+    PENDING,
+    CANCELLED
 }

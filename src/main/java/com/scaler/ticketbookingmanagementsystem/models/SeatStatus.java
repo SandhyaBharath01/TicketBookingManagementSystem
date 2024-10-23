@@ -1,2 +1,6 @@
-package com.scaler.ticketbookingmanagementsystem.models;public enum SeatStatus {
+package com.scaler.ticketbookingmanagementsystem.models;
+
+public enum SeatStatus {
+    AVAILABLE,
+    BOOKED
 }
