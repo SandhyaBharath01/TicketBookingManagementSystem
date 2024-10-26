@@ -13,8 +13,8 @@ import java.util.List;
 @Setter
 @Entity(name = "theaters")
 public class Theater extends BaseModel{
-    private String theaterName;
-    private String theaterAddress;
+    private String name;
+    private String address;
     @OneToMany
     @JoinColumn(name = "theaterId")
     private List<Screen> screens;
