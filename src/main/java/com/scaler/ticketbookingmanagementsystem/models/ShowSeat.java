@@ -1,20 +1,20 @@
 package com.scaler.ticketbookingmanagementsystem.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import jdk.jfr.Enabled;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-@Entity
+@Entity(name = "show_seats")
 public class ShowSeat extends BaseModel{
     @ManyToOne
     private Show show;
     @ManyToOne
     private Seat seat;
+
+    @Enumerated(EnumType.ORDINAL)
     private ShowSeatStatus showSeatStatus;
 
 }

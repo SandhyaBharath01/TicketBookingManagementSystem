@@ -1,9 +1,6 @@
 package com.scaler.ticketbookingmanagementsystem.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.autoconfigure.web.WebProperties;
@@ -12,7 +9,7 @@ import java.util.Date;
 
 @Getter
 @Setter
-@Entity
+@MappedSuperclass
 public class BaseModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

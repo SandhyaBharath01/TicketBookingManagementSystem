@@ -8,7 +8,7 @@ import java.util.List;
 
 @Getter
 @Setter
-@Entity
+@Entity(name = "movies")
 public class Movie extends BaseModel{
     String name;
     private List<String> actors;

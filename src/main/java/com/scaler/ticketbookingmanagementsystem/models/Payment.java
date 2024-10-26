@@ -10,7 +10,7 @@ import java.util.List;
 
 @Getter
 @Setter
-@Entity
+@Entity(name = "payments")
 public class Payment extends BaseModel{
     private String referencedNumber;
     private int amount;

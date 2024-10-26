@@ -14,7 +14,7 @@ import java.util.List;
 
 @Getter
 @Setter
-@Entity
+@Entity(name="bookins")
 public class Booking extends BaseModel {
 
     @ManyToOne

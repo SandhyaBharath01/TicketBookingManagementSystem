@@ -1,8 +1,6 @@
 package com.scaler.ticketbookingmanagementsystem.models;
 
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.jmx.export.annotation.ManagedNotification;
@@ -13,7 +11,7 @@ import java.util.List;
 
 @Getter
 @Setter
-@Entity
+@Entity(name = "shows")
 public class Show extends BaseModel {
 
     @ManyToOne
@@ -22,6 +20,8 @@ public class Show extends BaseModel {
     private Date endTime;
     @ManyToOne
     private Screen screen;
+
+    @Enumerated(EnumType.ORDINAL)
     @ElementCollection
     private List<Feature> features;
 }

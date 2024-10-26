@@ -1,6 +1,7 @@
 package com.scaler.ticketbookingmanagementsystem.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jdk.jfr.Enabled;
 import lombok.Getter;
@@ -10,10 +11,11 @@ import java.util.List;
 
 @Getter
 @Setter
-@Entity
+@Entity(name = "theaters")
 public class Theater extends BaseModel{
     private String theaterName;
     private String theaterAddress;
     @OneToMany
+    @JoinColumn(name = "theaterId")
     private List<Screen> screens;
 }
