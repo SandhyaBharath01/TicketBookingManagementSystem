@@ -8,6 +8,6 @@ import java.util.List;
 
 @Repository
 public interface ShowSeatrepository extends JpaRepository<ShowSeat, Long> {
-    List<ShowSeat> findAllById (List<Long> ShowSeatIds);
+    List<ShowSeat> findAllById (Iterable<Long> ShowSeatIds);
     ShowSeat save(ShowSeat showSeat);
 }
